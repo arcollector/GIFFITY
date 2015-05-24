@@ -4,6 +4,14 @@ App.Helpers = {};
 // *********************
 
 App.init = function() {
+	if( window.require ) {
+		App.gui = require( 'nw.gui' );
+		App.win = App.gui.Window.get();
+	} else {
+		App.gui = null;
+		App.win = window;
+	}
+	
 	App.$imageWrapper = document.querySelector( '.g-image-wrapper' );
 	App.$imageViewer = document.querySelector( '.g-image-viewer' );
 	App.$imageCanvas = document.querySelector( '.g-image-canvas' );
@@ -44,6 +52,13 @@ App.init = function() {
 		GIF.stop();
 		App.Views.displayWelcomeScreen();
 	} );
+	
+	if( App.gui ) {
+		document.querySelector( '.g-github-link' ).addEventListener( 'click', function( e ) {
+			e.preventDefault();
+			App.gui.Shell.openExternal( this.href );
+		} );
+	}
 	
 	GIF.init( {
 		canvasSelector: '.g-gif-canvas',
@@ -87,15 +102,6 @@ App.init = function() {
 			App.Views.displayFileNotImage();
 		}
 	} );
-
-	
-	if( window.require ) {
-		App.gui = require( 'nw.gui' );
-		App.win = App.gui.Window.get();
-	} else {
-		App.gui = null;
-		App.win = window;
-	}
 	
 	App.lastImageBlock = null;
 	App.lastDitheredImageBlock = null;
