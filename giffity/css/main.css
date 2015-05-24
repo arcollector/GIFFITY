@@ -1,0 +1,269 @@
+html {
+	background: #888;
+	font: 13px/1.4 Helvetica,arial,freesans,clean,sans-serif;
+	font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace;
+}
+
+body {
+
+}
+
+.g-clear {
+	clear: both;
+}
+.g-block {
+	display: block;
+}
+.g-button-blue {
+	border: 1px solid #1a6ba7;
+	background: linear-gradient(#2890dd, #1f7ec4);
+	box-shadow: 0 1px 0 #9dccf0 inset, 0 1px 0 #11456c;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 20px;
+	text-shadow: 0 1px 0 #000;
+	color: #fff;
+	font-weight: 600;
+}
+.g-button-blue:hover, 
+.g-button-blue:active {
+	background: linear-gradient(#2890dd, #54a7e4);
+}
+.g-button-gray {
+	border: 1px solid #777;
+	background: linear-gradient(#e5e5e5, #919191);
+	box-shadow: 0 1px 0 #f6f6f6 inset, 0 1px 0 #444;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 20px;
+	text-shadow: 0 1px 0 #000;
+	color: #fff;
+	font-weight: 600;
+}
+.g-button-gray:hover, 
+.g-button-gray:active {
+	background: linear-gradient(#e5e5e5, #aaa);
+}
+label > input {
+	vertical-align: middle;
+}
+
+/*****************************/
+/*****************************/
+
+.g-logo-wrapper {
+	width: 329px;
+	margin: 0 auto;
+}
+
+.g-image-loader {
+	border: 5px dashed #ccc;
+	border-radius: 5px;
+	padding: 60px 80px;
+	text-align: center;
+	width: 550px;
+	margin: 30px auto 30px;
+	position: relative;
+}
+
+.g-image-loader h1 {
+	color: #fbfbfb;
+	text-shadow: 0 2px 0 #555;
+	font-size: 30px;
+	text-align: center;
+}
+
+.g-image-loader span {
+	display: block;
+	font-size: 20px;
+	color: #ccc;
+	text-shadow: 0 -1px 0 #111;
+	font-weight: 600;
+	font-style: italic;
+}
+
+.g-image-loader-buttons {
+	margin: 25px auto 0;
+	text-align: center;
+	width: 240px;
+}
+
+.g-image-loader-file {
+	opacity: 0;
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+	height: 45px;
+}
+
+.g-image-loader-trigger {
+	position: relative;
+	top: -45px;
+	z-index: 1;
+}
+.g-image-loader-file:hover + .g-image-loader-trigger {
+	background: linear-gradient(#2890dd, #54a7e4);
+}
+
+.g-image-loader-error {
+	background: #ccc;
+	padding: 5px 0;
+	border-radius: 3px;
+	border: 1px solid #888;
+	position: absolute;
+	bottom: 6px;
+	width: 450px;
+	left: 145px;
+	transition: opacity .5s ease-in;
+	opacity: 0;
+}
+.g-image-loader-error img {
+	display: inline-block;
+	vertical-align: middle;
+}
+.g-image-loader-error span {
+	font-size: 12px;
+	display: inline-block;
+	font-weight: normal;
+	color: #000;
+	text-shadow: 0 1px 0 #fbfbfb;
+	font-style: italic;
+	vertical-align: middle;
+}
+
+/*****************************/
+/*****************************/
+
+.g-footer {
+    margin: 0 auto 0;
+    text-align: center;
+    width: 400px;
+}
+.g-footer a {
+	text-decoration: none;
+	color: #fff;
+	display: inline-block;
+	text-shadow: 0 -1px 0 #000;
+	vertical-align: middle;
+}
+.g-footer a:hover,
+.g-footer a:active {
+	text-shadow: 0 0 3px #2890dd;
+}
+.g-footer img {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	vertical-align: top;
+}
+.g-footer span {
+	display: block;
+	margin: 5px 0;
+	color: #fbfbfb;
+	text-shadow: 0 -1px 0 #000;
+}
+
+/*****************************/
+/*****************************/
+
+.g-image-wrapper {
+	/*border: 1px solid Window;*/
+	width: 800px;
+	height: 600px;
+	overflow: hidden;
+	white-space: nowrap;
+	margin: 0 auto;
+}
+
+.g-image-viewer {
+	text-align: center;
+	margin: auto;
+	overflow: scroll;
+	width: 553px;
+	height: 600px;
+	float: left;
+	background: #000;
+}
+.g-image-canvas {
+	display: block;
+	position: relative;
+}
+
+.g-image-encoder {
+	float: left;
+	background: Menu;
+	padding: 10px 8px 0 8px;
+	height: 590px;
+	width: 230px;
+	border-left: 1px solid Window;
+	vertical-align: top;
+}
+.g-image-encoder fieldset,
+.g-image-encoder div {
+	margin: 5px 0;
+}
+.g-image-encoder label {
+	font-size: 13px;
+}
+
+.g-image-encoder .g-button-blue,
+.g-image-encoder .g-button-gray {
+	padding: 5px 8px;
+	font-size: 13px;
+}
+
+.g-image-encoder-preloader {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/*****************************/
+/*****************************/
+
+.g-gif {
+	background: #000;
+	width: 800px;
+	height: 600px;
+	margin: 0 auto;
+	position: relative;
+}
+.g-gif-canvas {
+	position: relative;
+}
+.g-gif-controls {
+	position: absolute;
+	bottom: 0;
+	width: 770px;
+	padding: 5px 15px;
+	background: linear-gradient( #ddd, #ccc );
+	border-top: 1px solid #fbfbfb;
+	white-space: nowrap;
+	text-align: center;
+}
+.g-gif-controls-icon {
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.g-gif-controls-play {
+	background: url( play.png ) no-repeat 0 0;
+}
+.g-gif-controls-play.g-gif-controls-clicked {
+	background: url( play_clicked.png ) no-repeat 0 0;
+}
+.g-gif-controls-pause {
+	background: url( pause.png ) no-repeat 0 0;
+}
+.g-gif-controls-pause.g-gif-controls-clicked {
+	background: url( pause_clicked.png ) no-repeat 0 0;
+}
+.g-gif-controls-stop {
+	background: url( stop.png ) no-repeat 0 0;
+}
+.g-gif-controls-stop.g-gif-controls-clicked {
+	background: url( stop_clicked.png ) no-repeat 0 0;
+}

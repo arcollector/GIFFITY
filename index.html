@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Giffity</title>
+		<link href="giffity/css/normalize.css" rel="stylesheet">
+		<link href="giffity/css/main.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="g-main">
+			<div class="g-logo-wrapper">
+				<img src="giffity/css/logo.png">
+			</div>
+			<div class="g-image-loader">
+				<h1>Drag and drop here</h1>
+				<span>- or - </span>
+				<div class="g-image-loader-buttons">
+					<input class="g-image-loader-file" type="file">
+					<input class="g-image-loader-trigger g-button-blue" type="button" value="Browse your computer">
+				</div>
+				<div class="g-image-loader-error">
+					<img class="g-icon" src="giffity/css/warning.png">
+					<span>File isn't an image</span>
+				</div>
+			</div>
+			<div class="g-footer">
+				<a href=""><img src="giffity/css/github.png" title="Collaborate with project on Github"></a>
+				<span>version 0.1</span>
+			</div>
+			
+			<div class="g-image-wrapper" style="display:none">
+				<div class="g-image-viewer">
+					<canvas class="g-image-canvas"></canvas>
+				</div>
+				<div class="g-image-encoder">
+					<form class="g-image-encoder-form">
+						<fieldset>
+							<legend>Select color space convertion</legend>
+							<label class="g-block">
+								<input type="radio" name="color-space" value="1" checked class="g-image-encoder-field">
+								256 colors
+							</label>
+							<label class="g-block">
+								<input type="radio" name="color-space" value="2" class="g-image-encoder-field">
+								grayscale
+							</label>
+							<label class="g-block">
+								<input type="radio" name="color-space" value="3" class="g-image-encoder-field">
+								monochrome
+							</label>
+						</fieldset>
+						<fieldset>
+							<legend>Select filter</legend>
+							<label class="g-block">
+								<input type="radio" name="filter" value="0" class="g-image-encoder-field">
+								<span>None<span>
+							</label>
+							<label class="g-block">
+								<input type="radio" name="filter" value="1" disabled class="g-image-encoder-field">
+								<span>Bayer<span>
+							</label>
+							<label class="g-block">
+								<input type="radio" name="filter" value="2" checked class="g-image-encoder-field">
+								Floyd
+							</label>
+							<label class="g-block">
+								<input type="radio" name="filter" value="3" class="g-image-encoder-field">
+								Stucki
+							</label>
+							<label class="g-block">
+								<input type="radio" name="filter" value="4" class="g-image-encoder-field">
+								Burkes
+							</label>
+							<label class="g-block">
+								<input type="radio" name="filter" value="5" class="g-image-encoder-field">
+								Sierra
+							</label>
+							<label class="g-block">
+								<input type="radio" name="filter" value="6" class="g-image-encoder-field">
+								Jarvis, Juidce and Ninke
+							</label>
+							<label class="g-block">
+								<input type="radio" name="filter" value="7" class="g-image-encoder-field">
+								Stevenson and Arce
+							</label>
+						</fieldset>
+						<fieldset>
+							<legend>Gif options</legend>
+							<label class="g-block">
+								<input type="checkbox" name="uncompressed" class="g-image-encoder-field">
+								Uncompressed?
+							</label>
+							<label class="g-block">
+								<input type="checkbox" name="interlaced" class="g-image-encoder-field">
+								Interlaced?
+							</label>
+						</fieldset>
+						<div>
+							<label class="g-block">
+								<input type="checkbox" name="preview" class="g-image-encoder-preview g-image-encoder-field">
+								<span>Preview</span>
+							</label>
+						</div>
+						<div>
+							<input class="g-image-encoder-convert g-button-blue" type="submit" value="Convert to GIF">
+							<input class="g-image-encoder-cancel g-button-gray" type="button" value="Cancel">
+							<img class="g-image-encoder-preloader" src="giffity/css/preloader.gif" style="display:none">
+						</div>
+					</form>
+				</div>
+				<div class="g-clear"></div>
+			</div><!-- g-image-wrapper -->
+			
+			<div class="g-gif" style="display:none">
+				<canvas class="g-gif-canvas"></canvas>
+				<div class="g-gif-controls">
+					<span class="g-gif-controls-icon g-gif-controls-play"></span>
+					<span class="g-gif-controls-icon g-gif-controls-pause"></span>
+					<span class="g-gif-controls-icon g-gif-controls-stop"></span>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
+<script src="giffity/js/gif.js"></script>
+<script src="giffity/js/main.js"></script>

@@ -1,0 +1,20 @@
+{
+  "name": "Giffity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "arcollector",
+  "window": {
+    "toolbar": false,
+    "width": 800,
+    "height": 600,
+    "resizable": false,
+    "icon": "giffity/css/logo_small.png"
+  },
+  "license": "Public Domain",
+  "dependencies": {
+  }
+}
